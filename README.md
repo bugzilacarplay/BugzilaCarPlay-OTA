@@ -12,4 +12,4 @@ No application source code is included.
 
 ## Current latest version
 
-Version: 6.3.5
+Version: 6.3.6
