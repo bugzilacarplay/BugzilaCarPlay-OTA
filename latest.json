@@ -1,21 +1,21 @@
 {
-  "app_name": "Bugzila Car Play",
-  "latest_version": "6.3.6",
-  "version_code": 636,
-  "minimum_supported_version": "6.3.5",
-  "mandatory": false,
-  "title": "Bugzila Car Play Update",
-  "message": "Android Auto improvements, OTA update support, Release Note UI update and stability improvements.",
-  "apk_file_name": "BugzilaCarPlay.apk",
-  "apk_url": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.3.5/BugzilaCarPlay.apk",
-  "apk_size_mb": 0,
-  "apk_sha256": "9B0E18AEBCF000897B0A345D17A8F2C6E2A57F73AA09E89D493D5A300348669F",
-  "release_date": "2026-05-18",
-  "release_notes": [
-    "Added GitHub OTA Update support",
-    "Fixed Android Auto startup reliability",
-    "Improved Cast stability",
-    "Release Note screen redesign",
-    "Persistent play mode support"
-  ]
+"app_name": "Bugzila Car Play",
+"latest_version": "6.3.6",
+"version_code": 636,
+"minimum_supported_version": "6.3.5",
+"mandatory": false,
+"title": "Bugzila Car Play Update",
+"message": "Android Auto improvements, OTA update support, Release Note UI update and stability improvements.",
+"apk_file_name": "BugzilaCarPlay.apk",
+"apk_url": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.3.6/BugzilaCarPlay.apk",
+"apk_size_mb": 28.5,
+"apk_sha256": "9B0E18AEBCF000897B0A345D17A8F2C6E2A57F73AA09E89D493D5A300348669F",
+"release_date": "2026-05-18",
+"release_notes": [
+"Added GitHub OTA Update support",
+"Fixed Android Auto startup reliability",
+"Improved Cast stability",
+"Release Note screen redesign",
+"Persistent play mode support"
+]
 }
