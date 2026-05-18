@@ -1,0 +1,21 @@
+{
+  "app_name": "Bugzila Car Play",
+  "latest_version": "6.3.3",
+  "version_code": 633,
+  "minimum_supported_version": "6.2.0",
+  "mandatory": false,
+  "title": "Bugzila Car Play Update",
+  "message": "Improved Android Auto startup reliability, Cast fixes, artwork polish, and play mode messages.",
+  "apk_file_name": "BugzilaCarPlay_v6.3.3.apk",
+  "apk_url": "https://github.com/YOUR_GITHUB_USERNAME/BugzilaCarPlay-OTA/releases/download/v6.3.3/BugzilaCarPlay_v6.3.3.apk",
+  "apk_size_mb": 0,
+  "apk_sha256": "PASTE_SHA256_HERE_AFTER_BUILD",
+  "release_date": "2026-05-15",
+  "release_notes": [
+    "Improved Android Auto startup reliability",
+    "Faster media root response",
+    "Async media and radio preload",
+    "Improved Cast handling",
+    "Added play mode change message"
+  ]
+}
