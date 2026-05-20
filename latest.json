@@ -1,23 +1,19 @@
 {
   "json": {
-    "version": "6.5.19.04",
-    "versionCode": 651904,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.19.03/BugzilaCarPlay.apk",
+    "version": "6.5.20.03",
+    "versionCode": 652003,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.20.03/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Fixed crash after granting media/file permission",
-      "Improved Android 13–16 media permission handling",
-      "Improved Huawei P30 Pro EMUI 12 compatibility",
-      "Improved Vivo V40 Pro OriginOS 6 Android 16 compatibility",
-      "Added safer Local Music MediaStore scanning",
-      "Prevented crash from missing or null MediaStore columns",
-      "Improved local music scan fallback behavior",
-      "Updated About screen to Version 6.5.19.04",
-      "Updated Release Notes information",
-      "Android Auto, Online Radio, EQ, Cast and existing playback logic remain unchanged"
+      "Fixed compile errors in CastManager caused by unsupported CastContext async overload",
+      "Fixed Material3 card compile errors in Cast Settings and Privacy & Analytics screens",
+      "Fixed missing Material icons in Privacy & Analytics screen",
+      "Cast Settings and Privacy & Analytics remain available in Burger config menu",
+      "Updated About screen to Version 6.5.20.03",
+      "Cast fix, Android Auto redesign and safe startup logic remain active"
     ],
     "buildDate": "2026-05-20",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "BE299372D3E758FDD19250F8CABE26DDDBF1A64069EBD2F312AC52CBE8079815"
+    "sha256": "FD70D92395D7E0324924F8B87D855207C8378B0C0F8CE45A84ACF6970487DF71"
   }
 }
