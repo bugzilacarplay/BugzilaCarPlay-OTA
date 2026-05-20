@@ -1,8 +1,8 @@
 {
   "json": {
-    "version": "6.5.19.01",
-    "versionCode": 651901,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.19.01/BugzilaCarPlay.apk",
+    "version": "6.5.19.03",
+    "versionCode": 651903,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.19.03/BugzilaCarPlay.apk",
     "releaseNotes": [
       "Fixed crash after granting media/file permission",
       "Improved Android 13–16 media permission handling",
@@ -11,13 +11,13 @@
       "Added safer Local Music MediaStore scanning",
       "Prevented crash from missing or null MediaStore columns",
       "Improved local music scan fallback behavior",
-      "Updated About screen to Version 6.5.19.01",
+      "Updated About screen to Version 6.5.19.03",
       "Updated Release Notes information",
       "Android Auto, Online Radio, EQ, Cast and existing playback logic remain unchanged"
     ],
-    "buildDate": "2026-05-19",
+    "buildDate": "2026-05-20",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "61556C9FBED6D4C114F4E9BD7494D4351A873F7AF3D351A2FA85F4D5F9560A32"
+    "sha256": "40A604863D69BED7A20FE142A228073301610762A03C5A1CB5E91AE7B658843B"
   }
 }
