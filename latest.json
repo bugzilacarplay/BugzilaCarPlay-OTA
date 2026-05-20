@@ -11,7 +11,7 @@
       "Added safer Local Music MediaStore scanning",
       "Prevented crash from missing or null MediaStore columns",
       "Improved local music scan fallback behavior",
-      "Updated About screen to Version 6.5.19.03",
+      "Updated About screen to Version 6.5.19.04",
       "Updated Release Notes information",
       "Android Auto, Online Radio, EQ, Cast and existing playback logic remain unchanged"
     ],
