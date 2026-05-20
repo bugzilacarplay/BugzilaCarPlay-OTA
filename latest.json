@@ -1,7 +1,7 @@
 {
   "json": {
-    "version": "6.5.19.03",
-    "versionCode": 651903,
+    "version": "6.5.19.04",
+    "versionCode": 651904,
     "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.19.03/BugzilaCarPlay.apk",
     "releaseNotes": [
       "Fixed crash after granting media/file permission",
@@ -18,6 +18,6 @@
     "buildDate": "2026-05-20",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "40A604863D69BED7A20FE142A228073301610762A03C5A1CB5E91AE7B658843B"
+    "sha256": "BE299372D3E758FDD19250F8CABE26DDDBF1A64069EBD2F312AC52CBE8079815"
   }
 }
