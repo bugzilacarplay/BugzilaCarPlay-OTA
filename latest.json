@@ -1,19 +1,19 @@
 {
   "json": {
-    "version": "6.5.20.03",
-    "versionCode": 652003,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.20.03/BugzilaCarPlay.apk",
+    "version": "6.5.20.11",
+    "versionCode": 652011,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.20.11/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Fixed compile errors in CastManager caused by unsupported CastContext async overload",
-      "Fixed Material3 card compile errors in Cast Settings and Privacy & Analytics screens",
-      "Fixed missing Material icons in Privacy & Analytics screen",
-      "Cast Settings and Privacy & Analytics remain available in Burger config menu",
-      "Updated About screen to Version 6.5.20.03",
-      "Cast fix, Android Auto redesign and safe startup logic remain active"
+      "Fixed Kotlin compile error in LocalMediaLibraryService.kt",
+      "Fixed unsupported escape sequence in Android Auto voice search regex",
+      "Changed regex patterns to Kotlin raw string syntax",
+      "Android Auto Local Music microphone search remains active",
+      "Thai and English voice search support remains active",
+      "Updated About screen to Version 6.5.20.11"
     ],
-    "buildDate": "2026-05-20",
+    "buildDate": "2026-05-21",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "FD70D92395D7E0324924F8B87D855207C8378B0C0F8CE45A84ACF6970487DF71"
+    "sha256": "D05EB2696B57FAE8A8D9017AA1C2585361D744A615F8FEF08B773C4A24B714E8"
   }
 }
