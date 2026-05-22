@@ -1,3 +1,33 @@
+# 🚗 Bugzila Car Play v6.5.22.03 – Player Main-Thread Restore Crash Fix
+
+This release fixes the crash found from live logcat testing on Vivo V40 Pro.
+
+## Crash Found in Logcat
+
+`java.lang.IllegalStateException: Player is accessed on the wrong thread`
+
+The crash happened inside:
+
+`LocalMediaLibraryService.restoreLastState()`
+
+The service was resolving the previous queue on `Dispatchers.IO`, then calling ExoPlayer methods on the IO worker thread.
+
+## Fixed
+
+- Kept MediaStore scan and queue resolving on `Dispatchers.IO`
+- Moved all ExoPlayer calls back to `Dispatchers.Main`
+- Fixed:
+  - `player.setMediaItems(...)`
+  - `player.setMediaItem(...)`
+  - `player.prepare()`
+  - `player.seekTo(...)`
+
+## Still Active
+
+- Stable v6.0 permission flow
+- Stable v6.0 MediaStore scan model
+- Music filter: `IS_MUSIC != 0`, `SIZE > 500 KB`, `DURATION >= 60 sec`, MP3/M4A/AAC/FLAC
+- Video filter: `SIZE > 500 KB`, `DURATION >= 60 sec`, MP4/M4V/MOV/WEBM
 # 🚗 Bugzila Car Play v6.5.22.02 – Revert Permission and Media Scan to Stable v6.0 Model
 
 This release reverts the permission request and Local Music / Video MediaStore scan behavior back to the stable v6.0 model because v6.5.22.02 still caused app crashes on Vivo V40 Pro and Huawei P30 Pro.
