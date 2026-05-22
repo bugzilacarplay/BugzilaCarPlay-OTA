@@ -1,46 +1,54 @@
-# 🚗 Bugzila Car Play v6.5.20.12 – Vivo Video List + Thai Top 100 Playback Fix
+# 🚗 Bugzila Car Play v6.5.22.02 – Revert Permission and Media Scan to Stable v6.0 Model
 
-## Fixed
+This release reverts the permission request and Local Music / Video MediaStore scan behavior back to the stable v6.0 model because v6.5.22.02 still caused app crashes on Vivo V40 Pro and Huawei P30 Pro.
 
-- Fixed Video page not showing video files on Vivo V40 Pro Android 16
-- Added video permission request directly from the Video page
-- Added Android 14+ partial visual access handling
-- Video scanner now tries multiple MediaStore video collections safely
-- Added safer video query with MIME and size checks
-- Fixed Thai Top 100 station tap playback
-- Tap on a Thai Top 100 station now starts normal app playback instead of auto-casting
-- Added Media3 HLS dependency for `.m3u8` Online Radio streams
-- Normalized stream URLs before playback
+## Reverted to v6.0 Behavior
 
-## Notes
+- Startup permission request:
+  - Android 13+ requests `READ_MEDIA_AUDIO` + `READ_MEDIA_VIDEO` together
+  - Android 12 and below requests `READ_EXTERNAL_STORAGE`
+- Removed startup `READ_MEDIA_VISUAL_USER_SELECTED`
+- Local Music scan uses the stable v6.0 MediaStore query:
+  - `MediaStore.Audio.Media.EXTERNAL_CONTENT_URI`
+  - `IS_MUSIC != 0`
+  - no custom folder/path filtering
+  - no Vivo/Honor strict scan workaround
+- Video scan uses the stable v6.0 MediaStore query:
+  - `MediaStore.Video.Media.EXTERNAL_CONTENT_URI`
+  - simple `_ID`, `TITLE`, `DURATION` projection
+- Restored normal MediaController startup
+- Restored normal CastContext startup
+- Restored normal Equalizer startup
 
-For Vivo Android 16, open App Info > Permissions > Photos and videos and allow video access if the Video page is still empty.
-For Thai Top 100, some endpoints are `.m3u8` HLS streams and now require `media3-exoplayer-hls`, which is included in this version.
+# 🚗 Bugzila Car Play v6.5.22.02 – Stable v6.0 Media Scan with Music/Video Filters
 
-# 🚗 Bugzila Car Play v6.5.20.11 – Compile Hotfix for Android Auto Voice Search
+This release keeps the stable v6.0-style MediaStore scan model and adds stricter file filters for Local Music and Video.
 
-## Fixed
+## Local Music Filter
 
-- Fixed Kotlin compile error in `LocalMediaLibraryService.kt`
-- Fixed unsupported escape sequence in voice search regex
-- Changed regex patterns to Kotlin raw strings:
-  - `"""[\\p{Punct}]"""`
-  - `"""\\s+"""`
+- `IS_MUSIC != 0`
+- `SIZE > 500 KB`
+- `DURATION >= 60 sec`
+- `MIME_TYPE IN`:
+  - `audio/mpeg` for MP3
+  - `audio/mp4` for M4A / MP4 audio
+  - `audio/aac` for AAC
+  - `audio/flac` for FLAC
 
-## Still Active
+## Video Filter
 
-- Android Auto Local Music microphone search
-- Thai and English song-name search
-- Thai Top 100 beta radio category
-- Safe Modern Local Music scan
-- Cast / HLS radio improvements
+- `SIZE > 500 KB`
+- `DURATION >= 60 sec`
+- `MIME_TYPE IN`:
+  - `video/mp4` for MP4
+  - `video/x-m4v` for M4V
+  - `video/quicktime` for MOV
+  - `video/webm` for WEBM
 
-## Files
+## Note
 
-- `latest.json` - update manifest checked by the Android app
-- `releases/` - APK files for each release
-- `CHANGELOG.md` - short release history
+`IS_MUSIC` is an audio-only MediaStore column, so it is not used in the video query.
 
-## Current latest version
+## Goal
 
-Stable Version: 6.5.20.03
+Prioritize app stability on Vivo V40 Pro and Huawei P30 Pro by removing the newer experimental permission and scan workarounds.
