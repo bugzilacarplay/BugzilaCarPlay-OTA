@@ -1,22 +1,24 @@
 {
   "json": {
-    "version": "6.5.20.12",
-    "versionCode": 652012,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.20.12/BugzilaCarPlay.apk",
+    "version": "6.5.22.02",
+    "versionCode": 652202,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.02/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Fixed Video page not showing videos on Vivo V40 Pro Android 16",
-      "Added in-screen video permission request and partial visual access handling",
-      "Video scanner now tries multiple MediaStore video collections safely",
-      "Added safer video query with MIME, size filtering and scan limit for Vivo/Honor devices",
-      "Fixed Thai Top 100 station tap playback",
-      "Thai Top 100 station tap now always starts local playback instead of auto-casting",
-      "Added Media3 HLS dependency for .m3u8 Online Radio streams",
-      "Normalized Thai Top 100 stream URLs before playback",
-      "Updated About screen to Version 6.5.20.12"
+      "Added requested Local Music file filters while keeping v6.0-style MediaStore scan",
+      "Music scan now requires IS_MUSIC != 0",
+      "Music scan now requires SIZE > 500 KB",
+      "Music scan now requires DURATION >= 60 sec",
+      "Music scan now allows MIME types audio/mpeg, audio/mp4, audio/aac and audio/flac",
+      "Added requested Video file filters while keeping v6.0-style MediaStore scan",
+      "Video scan now requires SIZE > 500 KB",
+      "Video scan now requires DURATION >= 60 sec",
+      "Video scan now allows MIME types video/mp4, video/x-m4v, video/quicktime and video/webm",
+      "Note: Video MediaStore does not use IS_MUSIC because IS_MUSIC is an audio-only column",
+      "Updated About screen to Version 6.5.22.02"
     ],
-    "buildDate": "2026-05-21",
+    "buildDate": "2026-05-22",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "23F3DF157558868B85A0D791388D5FAF20F0B6001108BE53BDB5D15CD30BE137"
+    "sha256": "A1C4C1E6075C2E23F6859395EFD4D8274858D40F8467BE9BB6FD40ACA75E7253"
   }
 }
