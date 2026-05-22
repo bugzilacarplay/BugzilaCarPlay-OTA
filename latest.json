@@ -2,7 +2,7 @@
   "json": {
     "version": "6.5.22.03",
     "versionCode": 652203,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.03/BugzilaCarPlay.apk",
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.04/BugzilaCarPlay.apk",
     "releaseNotes": [
       "Fixed crash found in live log: Player is accessed on the wrong thread",
       "Moved restoreLastState player calls to Dispatchers.Main",
