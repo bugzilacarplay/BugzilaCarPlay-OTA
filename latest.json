@@ -1,24 +1,21 @@
 {
   "json": {
-    "version": "6.5.22.02",
-    "versionCode": 652202,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.02/BugzilaCarPlay.apk",
+    "version": "6.5.22.03",
+    "versionCode": 652203,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.03/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Added requested Local Music file filters while keeping v6.0-style MediaStore scan",
-      "Music scan now requires IS_MUSIC != 0",
-      "Music scan now requires SIZE > 500 KB",
-      "Music scan now requires DURATION >= 60 sec",
-      "Music scan now allows MIME types audio/mpeg, audio/mp4, audio/aac and audio/flac",
-      "Added requested Video file filters while keeping v6.0-style MediaStore scan",
-      "Video scan now requires SIZE > 500 KB",
-      "Video scan now requires DURATION >= 60 sec",
-      "Video scan now allows MIME types video/mp4, video/x-m4v, video/quicktime and video/webm",
-      "Note: Video MediaStore does not use IS_MUSIC because IS_MUSIC is an audio-only column",
-      "Updated About screen to Version 6.5.22.02"
+      "Fixed crash found in live log: Player is accessed on the wrong thread",
+      "Moved restoreLastState player calls to Dispatchers.Main",
+      "MediaStore scan remains on Dispatchers.IO",
+      "Fixed restore queue calls: player.setMediaItems and player.prepare",
+      "Fixed restore single item calls: player.setMediaItem, player.prepare and player.seekTo",
+      "Stable v6.0 permission flow remains active",
+      "Music/Video MIME, size and duration filters from v6.5.22.02 remain active",
+      "Updated About screen to Version 6.5.22.03"
     ],
     "buildDate": "2026-05-22",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "8AF5E2C747E69BFE332D706FB9FEFAA3D943CE53FAA7BC57AF86E57204563FC0"
+    "sha256": "DA1EA13DD2647F3626E635FBEDB8C44CF9E06539A3BC60F4BE37C6EF95CDD0BB"
   }
 }
