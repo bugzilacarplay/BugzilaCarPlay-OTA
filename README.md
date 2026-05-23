@@ -82,3 +82,6 @@ This release keeps the stable v6.0-style MediaStore scan model and adds stricter
 ## Goal
 
 Prioritize app stability on Vivo V40 Pro and Huawei P30 Pro by removing the newer experimental permission and scan workarounds.
+
+Download Our Application
+https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases
