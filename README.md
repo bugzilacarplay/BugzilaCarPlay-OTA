@@ -1,3 +1,19 @@
+# Bugzila Car Play v6.5.24.14
+
+Maintenance update for mobile player artwork and Online Radio controls.
+
+## Changes
+- Replaced `ic_bugzila_auto_artwork.png` with the updated Bugzila artwork.
+- Removed unused PNG assets from `app/src/main/res/drawable`.
+- Online Radio Player: enlarged the primary Play/Pause button to match the Music Player control size.
+- Online Radio Player: removed Previous Station and Next Station side buttons from the player control row.
+- Kept Favorite Radio Station icon on the Online Radio Player.
+- Preserved Local Music controls, Cast metadata display, Android Auto behavior, and Global Cast Mode.
+
+## Notes
+- If a station has no artwork or the artwork fails to load, the updated Bugzila artwork is used as fallback.
+- Build was not verified in this environment because Gradle dependencies may require internet access.
+
 # Bugzila Car Play v6.5.24.13
 
 ## What's Changed
