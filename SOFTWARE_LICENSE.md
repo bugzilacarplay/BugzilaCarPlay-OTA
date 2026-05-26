@@ -1,7 +1,7 @@
 # Bugzila Car Play — Software License
 
-**Effective Date:** [20260526]  
-**Version:** [3.5.24.01 and adove]
+**Effective Date:** 20260526
+**Version:** 3.5.24.01 and adove
 
 ## 1. License Grant
 
