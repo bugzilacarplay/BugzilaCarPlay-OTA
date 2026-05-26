@@ -1,21 +1,19 @@
 {
   "json": {
-    "version": "6.5.22.03",
-    "versionCode": 652203,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.22.04/BugzilaCarPlay.apk",
+    "version": "6.5.24.12",
+    "versionCode": 652412,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.12/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Fixed crash found in live log: Player is accessed on the wrong thread",
-      "Moved restoreLastState player calls to Dispatchers.Main",
-      "MediaStore scan remains on Dispatchers.IO",
-      "Fixed restore queue calls: player.setMediaItems and player.prepare",
-      "Fixed restore single item calls: player.setMediaItem, player.prepare and player.seekTo",
-      "Stable v6.0 permission flow remains active",
-      "Music/Video MIME, size and duration filters from v6.5.22.02 remain active",
-      "Updated About screen to Version 6.5.22.03"
+      "Removed Export Debug Log from Help & Support",
+      "Added Auto Check for Update toggle above Check for Updates",
+      "Auto check runs after app startup when enabled and sends a notification if a newer version is available",
+      "Notification opens Help & Support so users can manually start the update",
+      "Added first-launch Terms of Use, Software License & Legal Disclaimer acceptance",
+      "Added About > Legal / Disclaimer summary, full terms, and acceptance checkbox"
     ],
-    "buildDate": "2026-05-22",
+    "buildDate": "2026-05-25",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "DA1EA13DD2647F3626E635FBEDB8C44CF9E06539A3BC60F4BE37C6EF95CDD0BB"
+    "sha256": "8BE33EA907DAE508FB0B169C95B558996305B62196AC5429F4E17D514CFCAAD5"
   }
 }
