@@ -1,7 +1,7 @@
 # Bugzila Car Play — Legal Disclaimer
 
-**Effective Date:** [Insert Date]  
-**Version:** [Insert Version]
+**Effective Date:** 20260526
+**Version:** 3.5.24.01 and adove
 
 ## 1. General Disclaimer
 
