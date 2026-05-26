@@ -1,3 +1,47 @@
+# Bugzila Car Play v6.5.24.12
+
+## Update Focus
+Legal acceptance and safer update notification workflow.
+
+## Changes
+- Removed Export Debug Log from Burger menu > Help & Support.
+- Added Auto Check for Update toggle above Check for Updates.
+- Auto Check is disabled by default.
+- When enabled, the app checks for a new version after the main startup functions finish.
+- When a newer version is found, the app sends a notification: “Bugzila Car Play เวอร์ชันใหม่พร้อมดาวน์โหลดแล้ว”.
+- Tapping the notification opens Help & Support so the user can manually press update/download.
+- Added first-launch Terms of Use, Software License & Legal Disclaimer acceptance.
+- Added About > Legal / Disclaimer with short summary, full legal text, and an Accept checkbox.
+
+## Notes
+- Notification permission is requested on Android 13+.
+- OTA install remains user-confirmed only.
+- Cast and Android Auto behavior from v6.5.24.11 is preserved.
+
+# Bugzila Car Play v6.5.24.11
+
+## Cast control and UI reliability update
+
+This release improves Global Cast behavior after real-device testing with Google Nest Mini / Cast devices.
+
+### Fixed
+- Casted Local Music / Online Radio metadata now updates the mini player and Now Playing screen.
+- Main screen no longer depends on the purple Cast status bar by default.
+- Top Cast icon now shows connection state:
+  - white = not connected
+  - green = connected
+- Tapping the green Cast icon stops/disconnects the current Cast session.
+- Cast Settings > Stop Casting now ends the Cast session, not only the remote media stream.
+- Show Cast Status Bar setting now works live from Cast Settings.
+- Enable Cast Button setting now works live from Cast Settings.
+- Auto Stop Local Cast Server setting is honored when Cast session ends.
+- Prefer Local Audio Cast setting is honored for local music casting.
+
+### Notes
+- Android Auto behavior remains unchanged.
+- Per-song/per-station Cast icons remain removed.
+- Global Cast Mode remains active.
+
 # 🚗 Bugzila Car Play v6.5.22.03 – Player Main-Thread Restore Crash Fix
 
 This release fixes the crash found from live logcat testing on Vivo V40 Pro.
