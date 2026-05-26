@@ -1,19 +1,18 @@
 {
   "json": {
-    "version": "6.5.24.12",
-    "versionCode": 652412,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.12/BugzilaCarPlay.apk",
+    "version": "6.5.24.13",
+    "versionCode": 652413,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.13/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Removed Export Debug Log from Help & Support",
-      "Added Auto Check for Update toggle above Check for Updates",
-      "Auto check runs after app startup when enabled and sends a notification if a newer version is available",
-      "Notification opens Help & Support so users can manually start the update",
-      "Added first-launch Terms of Use, Software License & Legal Disclaimer acceptance",
-      "Added About > Legal / Disclaimer summary, full terms, and acceptance checkbox"
+      "Removed duplicated Release Notes card from About screen",
+      "Made Online Radio Player play button size consistent with Music Player",
+      "Enabled Previous Station and Next Station by loading the current radio category as a playable queue",
+      "Added visible Favorite Radio Station icon on Online Radio Player",
+      "Improved Cast now-playing metadata and favorite-state display for Local Music and Online Radio"
     ],
     "buildDate": "2026-05-25",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "8BE33EA907DAE508FB0B169C95B558996305B62196AC5429F4E17D514CFCAAD5"
+    "sha256": "33A510F6D91B673B394320D80BA35E720C454B9ABED37D2ADC680FA2E7700C24"
   }
 }
