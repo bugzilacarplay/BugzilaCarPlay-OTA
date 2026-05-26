@@ -1,14 +1,14 @@
 {
   "json": {
     "version": "6.5.24.14",
-    "versionCode": 652413,
+    "versionCode": 652414,
     "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.14/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Removed duplicated Release Notes card from About screen",
-      "Made Online Radio Player play button size consistent with Music Player",
-      "Enabled Previous Station and Next Station by loading the current radio category as a playable queue",
-      "Added visible Favorite Radio Station icon on Online Radio Player",
-      "Improved Cast now-playing metadata and favorite-state display for Local Music and Online Radio"
+      "Removed unused PNG assets from drawable resources",
+      "Updated Bugzila fallback artwork used by player, mini player and radio artwork",
+      "Adjusted Online Radio Player play button size to match Music Player",
+      "Removed Previous Station and Next Station buttons beside the Online Radio play button",
+      "Kept Favorite Radio Station support on Online Radio Player"
     ],
     "buildDate": "2026-05-25",
     "minimumSupportedVersion": "6.0.0",
