@@ -1,3 +1,14 @@
+# Bugzila Car Play v6.5.24.15
+
+## Changes
+- Removed Contact Developer from Burger menu > Help & Support.
+- Improved Mobile Online Radio Player layout so the Play button is fully visible and matches Music Player size.
+- Kept Favorite Radio Station control on the Online Radio Player.
+- Checked Beta Test functionality: no active Beta Test menu or beta-test feature remains in the app. Only legal disclaimer text may mention beta/preview OTA builds.
+
+## Notes
+- Update `ota/latest.json` SHA-256 after building the final APK.
+
 # Bugzila Car Play v6.5.24.14
 
 Maintenance update for mobile player artwork and Online Radio controls.
