@@ -1,18 +1,17 @@
 {
   "json": {
-    "version": "6.5.24.14",
-    "versionCode": 652414,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.14/BugzilaCarPlay.apk",
+    "version": "6.5.24.15",
+    "versionCode": 652415,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.15/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Removed unused PNG assets from drawable resources",
-      "Updated Bugzila fallback artwork used by player, mini player and radio artwork",
-      "Adjusted Online Radio Player play button size to match Music Player",
-      "Removed Previous Station and Next Station buttons beside the Online Radio play button",
-      "Kept Favorite Radio Station support on Online Radio Player"
+      "Removed Contact Developer from Help & Support",
+      "Improved Online Radio Player layout so the Play button is fully visible and matches Music Player size",
+      "Kept Favorite Radio Station control on Online Radio Player",
+      "Confirmed there is no active Beta Test menu or beta-test function in the app"
     ],
-    "buildDate": "2026-05-25",
+    "buildDate": "2026-05-26",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "CAEEDB42EABD09A7901486F008FAA1760E83F205806659EFFABC5DE3B8E819BB"
+    "sha256": "A0992B5AF497BEC55851B9C8F7780A94D00C94754B4D9B9F814D9BA8F2500C04"
   }
 }
