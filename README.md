@@ -1,3 +1,17 @@
+# Bugzila Car Play v6.5.24.13
+
+## What's Changed
+- Removed duplicated Release Notes section from About.
+- Updated Online Radio Player controls so the Play button matches the Music Player size.
+- Enabled Previous Station / Next Station by loading radio stations as a queue.
+- Added a Favorite Radio Station icon directly on the Online Radio Player.
+- Improved Player display for the currently Cast media for Local Music and Online Radio.
+
+## Test Focus
+- Open Online Radio > play any station > use Next / Previous in Player.
+- Favorite/unfavorite a station from the Player.
+- Connect Cast speaker > play Local Music and Online Radio > verify Now Playing metadata updates.
+
 # Bugzila Car Play v6.5.24.12
 
 ## Update Focus
