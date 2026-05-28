@@ -1,18 +1,17 @@
 {
   "json": {
-    "version": "6.5.24.26",
-    "versionCode": 652426,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.26/BugzilaCarPlay.apk",
+    "version": "6.5.24.27",
+    "versionCode": 652427,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.27/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Online Radio Player now locks and displays the tapped station immediately before stream connection starts",
-      "Bad or Lost Connection radio stations keep their selected station name instead of falling back to Unknown Title",
-      "Preserved selected radio metadata during transient stop/clear/prepare states",
-      "Radio Player now uses Live Radio fallback for radio artist text instead of Unknown Artist",
-      "Kept responsive landscape/tablet layout improvements from v6.5.24.25"
+      "Removed direct fallback streams for Cool Fahrenheit and Flex 104.5; Online Radio now keeps Radio Browser API as the station source",
+      "Added audio-only filtering to remove TV/video/HLS-video entries from Online Radio lists",
+      "Updated About > Legal / Disclaimer with public radio directory and third-party station stream ownership wording",
+      "Maintained selected-station lock behavior from v6.5.24.26 so Player does not show Unknown Title while connecting"
     ],
     "buildDate": "2026-05-28",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "8A03F269A79CE995D8A7E51B975BBA435EF66D2FFCC929E276F2EB39F0784D62"
+    "sha256": "03ABDBF6035E2643A35C2591F5D579A8E52A633378BC217441E9CEBE975AD211"
   }
 }
