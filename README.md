@@ -1,3 +1,20 @@
+# Bugzila Car Play v6.5.24.26
+
+## Release Summary
+This update fixes Online Radio first-open metadata behavior for Bad/Lost Connection stations.
+
+## Changes
+- Locks the selected radio station immediately when the user taps a station.
+- Shows the tapped station name in Now Playing before ExoPlayer connects or returns metadata.
+- Prevents Bad/Lost Connection streams from falling back to `Unknown Title`.
+- Keeps selected radio metadata during transient stop/clear/prepare player states.
+- Uses `Online Radio` / `Live Radio` as radio-safe fallback text instead of Local Music unknown metadata.
+- Keeps responsive landscape/tablet layout improvements from v6.5.24.25.
+
+## Version
+- Version Name: 6.5.24.26
+- Version Code: 652426
+
 # Bugzila Car Play v6.5.24.15
 
 ## Changes
