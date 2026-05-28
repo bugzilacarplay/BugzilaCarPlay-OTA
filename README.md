@@ -1,3 +1,28 @@
+# Bugzila Car Play v6.5.24.27
+
+## Release Summary
+
+This update cleans up Online Radio compliance and source handling.
+
+## Changes
+
+- Removed direct fallback streams:
+  - Cool Fahrenheit fallback stream
+  - Flex 104.5 direct stream override
+- Kept Radio Browser API endpoints as the Online Radio source.
+- Added audio-only filtering to reduce TV/video entries in Online Radio lists.
+- Updated About > Legal / Disclaimer wording:
+  - Bugzila Car Play uses public radio directory data and third-party station streams.
+  - The app does not host, own, rebroadcast, or license radio content.
+  - Availability and rights remain under each station/content owner.
+- Preserved the selected-station lock behavior from v6.5.24.26.
+
+## Build Info
+
+- Version Name: 6.5.24.27
+- Version Code: 652427
+- Build Date: 2026-05-28
+
 # Bugzila Car Play v6.5.24.26
 
 ## Release Summary
