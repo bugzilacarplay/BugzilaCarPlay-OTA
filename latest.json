@@ -1,17 +1,17 @@
 {
   "json": {
-    "version": "6.5.24.27",
-    "versionCode": 652427,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/download/v6.5.24.27/BugzilaCarPlay.apk",
+    "version": "6.5.24.29",
+    "versionCode": 652429,
+    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/latest/download/BugzilaCarPlay.apk",
     "releaseNotes": [
-      "Removed direct fallback streams for Cool Fahrenheit and Flex 104.5; Online Radio now keeps Radio Browser API as the station source",
-      "Added audio-only filtering to remove TV/video/HLS-video entries from Online Radio lists",
-      "Updated About > Legal / Disclaimer with public radio directory and third-party station stream ownership wording",
-      "Maintained selected-station lock behavior from v6.5.24.26 so Player does not show Unknown Title while connecting"
+      "Fixed Global Cast handoff when Online Radio is already playing on the phone before connecting a Cast speaker",
+      "When a Cast session starts from the Home cast icon, the currently playing radio station is automatically loaded to the speaker",
+      "Prevents silent Cast sessions that required selecting the radio station again",
+      "Kept existing OTA latest/download URL, landscape radio layout, favorites fix, and Radio Browser audio-only filtering"
     ],
-    "buildDate": "2026-05-28",
+    "buildDate": "2026-05-30",
     "minimumSupportedVersion": "6.0.0",
     "forceUpdate": false,
-    "sha256": "03ABDBF6035E2643A35C2591F5D579A8E52A633378BC217441E9CEBE975AD211"
+    "sha256": "D268C795E14906B359A44CC13224D0F17849316289CBCE881A9B8BF001BEAFEE"
   }
 }
