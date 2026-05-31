@@ -1,3 +1,33 @@
+# Bugzila Car Play v6.5.24.29
+
+## Release Summary
+
+This update fixes Global Cast handoff for Online Radio when a station is already playing on the phone before connecting to a Cast speaker.
+
+## Changes
+
+- Fixed Global Cast handoff when Online Radio is already playing locally before Cast connection.
+- After selecting a Cast device from the Home cast icon, the current radio station is automatically loaded to the speaker.
+- Prevented silent Cast sessions that required selecting the station again.
+- Kept the permanent GitHub latest APK URL.
+- Kept Online Radio landscape layout improvements.
+- Kept Favorite Radio Station full-object storage.
+- Kept Radio Browser audio-only filtering and legal disclaimer updates.
+
+## Version
+
+- Version Name: 6.5.24.29
+- Version Code: 652429
+- Build Date: 2026-05-30
+
+## APK Download URL
+
+https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/latest/download/BugzilaCarPlay.apk
+
+## SHA-256
+
+Replace `REPLACE_WITH_APK_SHA256_AFTER_BUILD` after building the release APK.
+
 # Bugzila Car Play v6.5.24.27
 
 ## Release Summary
