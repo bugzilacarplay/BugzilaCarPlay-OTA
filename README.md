@@ -1,3 +1,25 @@
+# Bugzila Car Play v6.6.01.09
+
+## Release Summary
+
+This update refreshes the Android Auto first screen with clean Material 3-inspired mode icons for Local Music and Online Radio, while preserving the timed ICY Metadata behavior introduced in v6.6.01.08.
+
+## Changes
+
+- Added new Android Auto home icons:
+  - Local Music: Material 3-inspired music card icon.
+  - Online Radio: Material 3-inspired live broadcast icon.
+- Kept readable text labels: `Local Music` and `Online Radio`.
+- Removed unused old embedded-text Android Auto bitmap icon files.
+- Kept timed radio metadata display:
+  - First 10 seconds after a new ICY track: station name / song - artist.
+  - After 10 seconds: song / artist.
+  - No ICY metadata: station name / station description.
+
+## Notes
+
+The icon design uses original vector drawables inspired by Material 3 visual style. No external icon assets are required.
+
 # Bugzila Car Play v6.5.24.29
 
 ## Release Summary
