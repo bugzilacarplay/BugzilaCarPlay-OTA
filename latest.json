@@ -1,17 +1,15 @@
 {
-  "json": {
-    "version": "6.5.24.29",
-    "versionCode": 652429,
-    "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/latest/download/BugzilaCarPlay.apk",
-    "releaseNotes": [
-      "Fixed Global Cast handoff when Online Radio is already playing on the phone before connecting a Cast speaker",
-      "When a Cast session starts from the Home cast icon, the currently playing radio station is automatically loaded to the speaker",
-      "Prevents silent Cast sessions that required selecting the radio station again",
-      "Kept existing OTA latest/download URL, landscape radio layout, favorites fix, and Radio Browser audio-only filtering"
-    ],
-    "buildDate": "2026-05-30",
-    "minimumSupportedVersion": "6.0.0",
-    "forceUpdate": false,
-    "sha256": "D268C795E14906B359A44CC13224D0F17849316289CBCE881A9B8BF001BEAFEE"
-  }
+  "version": "6.6.01.09",
+  "versionCode": 660109,
+  "apkUrl": "https://github.com/bugzilacarplay/BugzilaCarPlay-OTA/releases/latest/download/BugzilaCarPlay.apk",
+  "releaseNotes": [
+    "When a new ICY song arrives, Android Auto first shows station name / song - artist for 10 seconds.",
+    "After 10 seconds, Android Auto switches to song title / artist until the next ICY song arrives.",
+    "The mobile Radio Player and mini player now follow the same timed metadata display behavior.",
+    "Stations without ICY metadata continue to show station name / station description, with Online Radio • Live fallback."
+  ],
+  "buildDate": "2026-06-03",
+  "minimumSupportedVersion": "6.0.0",
+  "forceUpdate": false,
+  "sha256": "26384D1B5F5372CE83211BBE0C1336B7A717A9940DF2ADF4342F68F9EED8B7BB"
 }
