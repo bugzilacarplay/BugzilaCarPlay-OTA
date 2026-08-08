@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bugzila Car Play | Closed Test Completed • Public Review in Progress</title>
+  <meta name="description" content="Bugzila Car Play official page by Bugzila Labs. Closed test has ended and the app is now under Google Play public review." />
+  <meta name="theme-color" content="#ef3a3a" />
+  <style>
+    :root{
+      --bg:#f7f4ef;
+      --paper:#fffdf9;
+      --ink:#161616;
+      --muted:#575757;
+      --red:#ef3a3a;
+      --red-dark:#cb202b;
+      --beige:#ede4d8;
+      --beige-2:#f3ece3;
+      --line:#e0d6ca;
+      --shadow:0 16px 40px rgba(45,25,10,.12);
+      --radius:28px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,"Noto Sans Thai",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 8% 10%, rgba(239,58,58,.10), transparent 24%),
+        radial-gradient(circle at 88% 6%, rgba(244,164,96,.16), transparent 18%),
+        linear-gradient(180deg,#faf7f2 0%,#f4efe8 100%);
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.26;
+      background-image:
+        linear-gradient(135deg, transparent 0 48%, rgba(214,198,181,.45) 49%, transparent 50%),
+        linear-gradient(45deg, transparent 0 48%, rgba(214,198,181,.35) 49%, transparent 50%);
+      background-size:54px 54px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.35));
+    }
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(var(--max),92vw);margin:auto;position:relative}
+
+    .nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,250,244,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(180,155,130,.24);
+    }
+    .navin{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-weight:900;font-size:24px;letter-spacing:-.02em}
+    .brand img{width:46px;height:46px;border-radius:50%;box-shadow:0 8px 24px rgba(239,58,58,.28)}
+    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .navlinks{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .navlinks a{text-decoration:none;color:var(--muted);font-weight:700}
+    .navlinks a:hover{color:var(--red-dark)}
+    .lang-switch{display:inline-flex;align-items:center;padding:5px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(180,155,130,.3);box-shadow:0 6px 18px rgba(80,54,30,.06)}
+    .lang-switch button{
+      border:0;background:transparent;padding:10px 16px;border-radius:999px;cursor:pointer;
+      font-weight:800;color:var(--muted);font-size:14px;
+    }
+    .lang-switch button.active{background:linear-gradient(135deg,var(--red),#ff7c48);color:#fff;box-shadow:0 6px 18px rgba(239,58,58,.28)}
+
+    .hero{padding:38px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:34px;align-items:center}
+    .badge{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;
+      background:rgba(239,58,58,.10);border:1px solid rgba(239,58,58,.18);color:#8f1e1e;font-weight:800;
+    }
+    .dot{width:10px;height:10px;border-radius:50%;background:#43b55d;box-shadow:0 0 14px rgba(67,181,93,.55)}
+    h1{
+      font-size:clamp(42px,6vw,74px);line-height:.98;margin:18px 0 16px;
+      letter-spacing:-.04em;
+    }
+    .hero p.lead{font-size:clamp(18px,2.1vw,24px);line-height:1.68;color:#3b3b3b;margin:0 0 20px}
+    .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;text-decoration:none;
+      border-radius:18px;font-weight:900;border:1px solid transparent;transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--red),#ff7c48);color:#fff;box-shadow:0 14px 34px rgba(239,58,58,.22)}
+    .btn-secondary{background:#fff;color:var(--ink);border-color:rgba(180,155,130,.42);box-shadow:var(--shadow)}
+    .btn-soft{background:rgba(255,255,255,.72);border-color:rgba(180,155,130,.34)}
+    .hero-note{
+      margin-top:18px;padding:18px 20px;border-radius:22px;background:linear-gradient(135deg,#fffaf4,#f6ece1);
+      border:1px solid var(--line);box-shadow:var(--shadow);color:#473d34;line-height:1.7;
+    }
+
+    .art-card{
+      position:relative;background:linear-gradient(180deg,#fffdfa,#f6ede2);border:1px solid #eadfce;border-radius:34px;
+      box-shadow:0 24px 56px rgba(88,59,31,.12);padding:18px;overflow:hidden;
+    }
+    .art-card:before{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(135deg,transparent 0 48%, rgba(255,255,255,.28) 49%, transparent 50%),
+                 linear-gradient(45deg,transparent 0 48%, rgba(232,219,205,.45) 49%, transparent 50%);
+      background-size:88px 88px;
+      opacity:.28;
+    }
+    .art-main{border-radius:24px;overflow:hidden;position:relative;z-index:1}
+    .art-main img{width:100%;height:auto;border-radius:24px}
+    .art-floating{
+      position:absolute;right:-10px;bottom:-18px;width:min(33%,170px);z-index:2;
+      filter:drop-shadow(0 18px 24px rgba(0,0,0,.18));
+    }
+
+    .section{padding:26px 0}
+    .section-head{text-align:center;max-width:830px;margin:0 auto 24px}
+    .section-head h2{font-size:clamp(32px,4.2vw,52px);margin:0 0 10px;letter-spacing:-.03em}
+    .section-head p{margin:0;color:var(--muted);font-size:18px;line-height:1.7}
+
+    .status-grid,.links-grid,.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(250,245,238,.98));
+      border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:var(--shadow);
+      position:relative;overflow:hidden;
+    }
+    .card:after{
+      content:"";position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:24px;
+      background:linear-gradient(135deg,rgba(239,58,58,.10),rgba(255,195,120,.06));transform:rotate(18deg);
+    }
+    .card .icon{font-size:34px;position:relative;z-index:1}
+    .card h3{margin:14px 0 10px;font-size:24px;position:relative;z-index:1}
+    .card p{margin:0;color:var(--muted);line-height:1.65;position:relative;z-index:1}
+    .card .mini{display:inline-block;margin-top:14px;font-weight:800;color:var(--red-dark);text-decoration:none;position:relative;z-index:1}
+
+    .highlight{
+      display:grid;grid-template-columns:.94fr 1.06fr;gap:24px;align-items:center;
+      background:linear-gradient(135deg,#fffefb,#f6ede2);border:1px solid var(--line);border-radius:34px;
+      padding:24px;box-shadow:var(--shadow)
+    }
+    .highlight-media{background:#fff;border-radius:26px;padding:14px;border:1px solid #efe4d7}
+    .highlight-media img{border-radius:18px}
+    .highlight-copy h2{font-size:clamp(30px,3.9vw,48px);margin:0 0 12px;letter-spacing:-.03em}
+    .highlight-copy p{margin:0 0 14px;color:#4f4a43;line-height:1.76;font-size:18px}
+    .note-box{
+      margin-top:18px;padding:18px 20px;border-radius:20px;background:rgba(239,58,58,.08);
+      border:1px solid rgba(239,58,58,.16);color:#5d2f2f;line-height:1.7;
+    }
+    .code-pill{display:inline-block;margin-top:4px;padding:6px 10px;border-radius:10px;background:#201b18;color:#fff;font-family:Consolas,monospace;font-size:14px}
+
+    .links-grid .card a.link-btn,
+    .contact-grid .card a.link-btn{
+      display:inline-flex;align-items:center;gap:8px;margin-top:16px;text-decoration:none;
+      background:#fff;padding:12px 14px;border-radius:14px;border:1px solid rgba(180,155,130,.38);font-weight:800;
+      width:fit-content;box-shadow:0 10px 20px rgba(80,54,30,.07)
+    }
+
+    .thankyou{
+      margin-top:4px;background:linear-gradient(135deg,#fff4f1,#f6ede1);border:1px solid var(--line);border-radius:30px;
+      padding:28px;text-align:center;box-shadow:var(--shadow)
+    }
+    .thankyou h2{margin:0 0 10px;font-size:clamp(30px,3.7vw,46px)}
+    .thankyou p{max-width:830px;margin:0 auto;color:var(--muted);line-height:1.75;font-size:18px}
+
+    .footer{padding:28px 0 44px;color:#6e6357;text-align:center}
+    .footer a{color:var(--red-dark)}
+
+    @media (max-width:980px){
+      .hero-grid,.highlight{grid-template-columns:1fr}
+      .status-grid,.links-grid,.contact-grid{grid-template-columns:1fr 1fr}
+      .navlinks{display:none}
+      .art-floating{width:min(30vw,160px)}
+    }
+    @media (max-width:640px){
+      .navin{align-items:flex-start;padding:12px 0}
+      .nav-right{width:100%;justify-content:space-between}
+      .status-grid,.links-grid,.contact-grid{grid-template-columns:1fr}
+      .brand{font-size:20px}
+      .lang-switch button{padding:9px 13px}
+      .btn{width:100%}
+      .hero{padding-top:24px}
+      .card,.highlight,.thankyou,.hero-note{padding:20px}
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3DGR4V5DM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y3DGR4V5DM');
+    function trackBugzilaEvent(eventName, eventLabel){
+      if (typeof gtag === 'function') {
+        gtag('event', eventName, {
+          event_category: 'Bugzila Car Play Origami Landing',
+          event_label: eventLabel || '',
+          app_web_version: '6.5.29.05'
+        });
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top" onclick="trackBugzilaEvent('nav_brand_click','brand')">
+        <img src="assets/bugzila_mascot_circle.png" alt="Bugzila mascot" />
+        <span>Bugzila Car Play</span>
+      </a>
+      <div class="nav-right">
+        <div class="navlinks">
+          <a href="#status" data-i18n="nav_status">Status</a>
+          <a href="#links" data-i18n="nav_links">Links</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </div>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button id="lang-en" class="active" type="button" onclick="setLanguage('en')">English</button>
+          <button id="lang-th" type="button" onclick="setLanguage('th')">ไทย</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badge"><span class="dot"></span><span data-i18n="hero_badge">Closed Test completed • Public Review in progress</span></div>
+          <h1 data-i18n="hero_title">Bugzila Car Play is on the way to Google Play</h1>
+          <p class="lead" data-i18n="hero_lead">Thank you to everyone who joined the closed test. The closed test program has ended, and Bugzila Labs is now waiting for Google Play public review approval for the new Bugzila Car Play app.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bugzilacarplay.app" target="_blank" rel="noopener" onclick="trackBugzilaEvent('play_store_click','hero_primary')">
+              <span>▶</span><span data-i18n="cta_play">Open on Google Play</span>
+            </a>
+            <a class="btn btn-secondary" href="https://play.google.com/store/apps/dev?id=6120410820220883472" target="_blank" rel="noopener" onclick="trackBugzilaEvent('developer_page_click','hero_secondary')">
+              <span>⧉</span><span data-i18n="cta_dev">Visit Bugzila Labs</span>
+            </a>
+            <a class="btn btn-soft" href="https://www.facebook.com/profile.php?id=61590205657331" target="_blank" rel="noopener" onclick="trackBugzilaEvent('facebook_click','hero_facebook')">
+              <span>f</span><span data-i18n="cta_fb">Follow on Facebook</span>
+            </a>
+          </div>
+          <div class="hero-note">
+            <strong data-i18n="hero_note_title">Current update:</strong>
+            <span data-i18n="hero_note_text"> The Google Play Store page is already available. If you have an older Bugzila build installed from the previous package, please remove the old version before installing the new Google Play version.</span>
+          </div>
+        </div>
+        <div class="art-card">
+          <div class="art-main">
+            <img src="assets/bugzila_origami_world.png" alt="Bugzila Labs origami journey artwork" />
+          </div>
+          <img class="art-floating" src="assets/bugzila_mascot_circle.png" alt="Bugzila mascot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="status">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="status_title">Project status</h2>
+          <p data-i18n="status_sub">A quick summary for users who followed the test program and are waiting for the public Google Play release.</p>
+        </div>
+        <div class="status-grid">
+          <article class="card">
+            <div class="icon">✅</div>
+            <h3 data-i18n="card1_title">Closed Test completed</h3>
+            <p data-i18n="card1_text">The close test program has officially ended. Thank you to all testers who joined, installed the app, and shared feedback.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🕒</div>
+            <h3 data-i18n="card2_title">Public Review pending</h3>
+            <p data-i18n="card2_text">Bugzila Labs has submitted the app for public review and is currently waiting for Google Play approval.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚗</div>
+            <h3 data-i18n="card3_title">New Google Play package</h3>
+            <p data-i18n="card3_text">The Google Play version uses the package name com.bugzilacarplay.app and should be treated as the main installation for future public releases.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap highlight">
+        <div class="highlight-media">
+          <img src="assets/bugzila_origami_world.png" alt="Origami Bugzila Car Play world" />
+        </div>
+        <div class="highlight-copy">
+          <h2 data-i18n="migration_title">Important note for existing users</h2>
+          <p data-i18n="migration_text1">If you installed an older Bugzila Car Play build from the previous package or from direct APK installation, Android may treat the new Google Play build as a different app.</p>
+          <p data-i18n="migration_text2">To move to the official Google Play build smoothly, please back up anything important if needed, uninstall the old version, and then install the new version from Google Play.</p>
+          <div class="note-box">
+            <strong data-i18n="migration_box_title">Google Play package name:</strong><br />
+            <span class="code-pill">com.bugzilacarplay.app</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="links_title">Official links</h2>
+          <p data-i18n="links_sub">You can use the official channels below to follow the app, view the store listing, or contact the team.</p>
+        </div>
+        <div class="links-grid">
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3 data-i18n="link1_title">Bugzila Car Play on Google Play</h3>
+            <p data-i18n="link1_text">View the public Google Play listing for Bugzila Car Play and check release status and store details.</p>
+            <a class="link-btn" href="https://play.google.com/store/apps/details?id=com.bugzilacarplay.app" target="_blank" rel="noopener" onclick="trackBugzilaEvent('play_store_click','links_section')" data-i18n="open_link">Open link</a>
+          </article>
+          <article class="card">
+            <div class="icon">🧪</div>
+            <h3 data-i18n="link2_title">Bugzila Labs developer page</h3>
+            <p data-i18n="link2_text">Browse the official Bugzila Labs page on Google Play to see the developer identity and future apps.</p>
+            <a class="link-btn" href="https://play.google.com/store/apps/dev?id=6120410820220883472" target="_blank" rel="noopener" onclick="trackBugzilaEvent('developer_page_click','links_section')" data-i18n="open_link">Open link</a>
+          </article>
+          <article class="card">
+            <div class="icon">💬</div>
+            <h3 data-i18n="link3_title">Facebook: Bugzila Car Play</h3>
+            <p data-i18n="link3_text">Follow Bugzila Car Play on Facebook for updates, announcements, and communication from the team.</p>
+            <a class="link-btn" href="https://www.facebook.com/profile.php?id=61590205657331" target="_blank" rel="noopener" onclick="trackBugzilaEvent('facebook_click','links_section')" data-i18n="open_link">Open link</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="thankyou">
+          <h2 data-i18n="thanks_title">Thank you for supporting Bugzila Car Play</h2>
+          <p data-i18n="thanks_text">The journey continues from closed testing to public release. Your support, installs, and feedback help Bugzila Labs improve the experience for Android Auto, Local Music, Online Radio, and more.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div data-i18n="footer_text">Bugzila Car Play • Bugzila Labs • Origami Journey Landing Page</div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        nav_status: 'Status',
+        nav_links: 'Links',
+        nav_contact: 'Contact',
+        hero_badge: 'Closed Test completed • Public Review in progress',
+        hero_title: 'Bugzila Car Play is on the way to Google Play',
+        hero_lead: 'Thank you to everyone who joined the closed test. The closed test program has ended, and Bugzila Labs is now waiting for Google Play public review approval for the new Bugzila Car Play app.',
+        cta_play: 'Open on Google Play',
+        cta_dev: 'Visit Bugzila Labs',
+        cta_fb: 'Follow on Facebook',
+        hero_note_title: 'Current update:',
+        hero_note_text: ' The Google Play Store page is already available. If you have an older Bugzila build installed from the previous package, please remove the old version before installing the new Google Play version.',
+        status_title: 'Project status',
+        status_sub: 'A quick summary for users who followed the test program and are waiting for the public Google Play release.',
+        card1_title: 'Closed Test completed',
+        card1_text: 'The close test program has officially ended. Thank you to all testers who joined, installed the app, and shared feedback.',
+        card2_title: 'Public Review pending',
+        card2_text: 'Bugzila Labs has submitted the app for public review and is currently waiting for Google Play approval.',
+        card3_title: 'New Google Play package',
+        card3_text: 'The Google Play version uses the package name com.bugzilacarplay.app and should be treated as the main installation for future public releases.',
+        migration_title: 'Important note for existing users',
+        migration_text1: 'If you installed an older Bugzila Car Play build from the previous package or from direct APK installation, Android may treat the new Google Play build as a different app.',
+        migration_text2: 'To move to the official Google Play build smoothly, please back up anything important if needed, uninstall the old version, and then install the new version from Google Play.',
+        migration_box_title: 'Google Play package name:',
+        links_title: 'Official links',
+        links_sub: 'You can use the official channels below to follow the app, view the store listing, or contact the team.',
+        link1_title: 'Bugzila Car Play on Google Play',
+        link1_text: 'View the public Google Play listing for Bugzila Car Play and check release status and store details.',
+        link2_title: 'Bugzila Labs developer page',
+        link2_text: 'Browse the official Bugzila Labs page on Google Play to see the developer identity and future apps.',
+        link3_title: 'Facebook: Bugzila Car Play',
+        link3_text: 'Follow Bugzila Car Play on Facebook for updates, announcements, and communication from the team.',
+        open_link: 'Open link',
+        thanks_title: 'Thank you for supporting Bugzila Car Play',
+        thanks_text: 'The journey continues from closed testing to public release. Your support, installs, and feedback help Bugzila Labs improve the experience for Android Auto, Local Music, Online Radio, and more.',
+        footer_text: 'Bugzila Car Play • Bugzila Labs • Origami Journey Landing Page'
+      },
+      th: {
+        nav_status: 'สถานะ',
+        nav_links: 'ลิงก์',
+        nav_contact: 'ติดต่อ',
+        hero_badge: 'สิ้นสุด Closed Test แล้ว • กำลังรอ Public Review',
+        hero_title: 'Bugzila Car Play กำลังเดินทางสู่ Google Play',
+        hero_lead: 'ขอขอบคุณทุกท่านที่เข้าร่วมการทดสอบแบบปิด โครงการ Closed Test ได้สิ้นสุดลงแล้ว และขณะนี้ Bugzila Labs กำลังรอการอนุมัติ Public Review จาก Google Play สำหรับแอป Bugzila Car Play รุ่นใหม่',
+        cta_play: 'เปิดหน้า Google Play',
+        cta_dev: 'ดูหน้า Bugzila Labs',
+        cta_fb: 'ติดตามบน Facebook',
+        hero_note_title: 'อัปเดตล่าสุด:',
+        hero_note_text: ' ขณะนี้มีหน้าแอปบน Google Play แล้ว หากคุณมี Bugzila เวอร์ชันเก่าจากแพ็กเกจเดิมติดตั้งอยู่ กรุณาลบรุ่นเก่าออกก่อน แล้วจึงติดตั้งเวอร์ชันใหม่จาก Google Play',
+        status_title: 'สถานะโครงการ',
+        status_sub: 'สรุปสั้น ๆ สำหรับผู้ที่ติดตามช่วงทดสอบ และกำลังรอการเปิดให้ใช้งานแบบสาธารณะบน Google Play',
+        card1_title: 'สิ้นสุด Closed Test แล้ว',
+        card1_text: 'โปรแกรมทดสอบแบบปิดได้สิ้นสุดอย่างเป็นทางการแล้ว ขอบคุณผู้ทดสอบทุกท่านที่เข้าร่วม ติดตั้งแอป และส่งข้อเสนอแนะกลับมา',
+        card2_title: 'กำลังรอ Public Review',
+        card2_text: 'Bugzila Labs ได้ส่งแอปเพื่อขอ Public Review แล้ว และขณะนี้กำลังรอการอนุมัติจาก Google Play',
+        card3_title: 'ใช้แพ็กเกจ Google Play ใหม่',
+        card3_text: 'เวอร์ชันบน Google Play ใช้ package name com.bugzilacarplay.app และควรถือเป็นเวอร์ชันหลักสำหรับการติดตั้งสาธารณะในอนาคต',
+        migration_title: 'หมายเหตุสำคัญสำหรับผู้ใช้เดิม',
+        migration_text1: 'หากคุณเคยติดตั้ง Bugzila Car Play รุ่นเก่าจากแพ็กเกจเดิม หรือเคยติดตั้งผ่านไฟล์ APK โดยตรง Android อาจมองว่าเวอร์ชันใหม่บน Google Play เป็นคนละแอป',
+        migration_text2: 'เพื่อย้ายมาใช้เวอร์ชันทางการบน Google Play อย่างราบรื่น กรุณาสำรองข้อมูลที่สำคัญหากจำเป็น ถอนการติดตั้งรุ่นเก่า แล้วจึงติดตั้งรุ่นใหม่จาก Google Play',
+        migration_box_title: 'ชื่อแพ็กเกจบน Google Play:',
+        links_title: 'ลิงก์ทางการ',
+        links_sub: 'คุณสามารถใช้ช่องทางทางการด้านล่างเพื่อติดตามแอป ดูหน้าร้านค้า หรือสื่อสารกับทีมงาน',
+        link1_title: 'หน้า Bugzila Car Play บน Google Play',
+        link1_text: 'เปิดดูหน้าร้านค้าอย่างเป็นทางการของ Bugzila Car Play และตรวจสอบสถานะการเผยแพร่รวมถึงรายละเอียดของแอป',
+        link2_title: 'หน้าผู้พัฒนา Bugzila Labs',
+        link2_text: 'ดูหน้า Bugzila Labs บน Google Play เพื่อยืนยันตัวตนผู้พัฒนา และติดตามแอปอื่น ๆ ในอนาคต',
+        link3_title: 'Facebook: Bugzila Car Play',
+        link3_text: 'ติดตาม Bugzila Car Play บน Facebook เพื่อรับข่าวสาร ประกาศ และการสื่อสารจากทีมงาน',
+        open_link: 'เปิดลิงก์',
+        thanks_title: 'ขอบคุณที่สนับสนุน Bugzila Car Play',
+        thanks_text: 'การเดินทางของน้องเต่าทองยังดำเนินต่อจากช่วงทดสอบแบบปิดไปสู่การเปิดใช้งานสาธารณะ แรงสนับสนุน การติดตั้ง และข้อเสนอแนะของคุณ ช่วยให้ Bugzila Labs พัฒนาประสบการณ์สำหรับ Android Auto, Local Music, Online Radio และอื่น ๆ ให้ดียิ่งขึ้น',
+        footer_text: 'Bugzila Car Play • Bugzila Labs • หน้า Landing Page แนว Origami Journey'
+      }
+    };
+
+    function setLanguage(lang){
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-th').classList.toggle('active', lang === 'th');
+      localStorage.setItem('bugzila_lang', lang);
+      trackBugzilaEvent('language_switch', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      const savedLang = localStorage.getItem('bugzila_lang') || 'en';
+      setLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
